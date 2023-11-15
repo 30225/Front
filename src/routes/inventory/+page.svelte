@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import AppBar from '../appbar.svelte';
-	const url = 'http://localhost:8000/products';
+	const url = 'https://angel-fenix.onrender.com/products';
 	let data = [];
 
 	const getproducts = async () => {
