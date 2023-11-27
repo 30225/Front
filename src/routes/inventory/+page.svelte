@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { userName } from '$lib/stores/user';
 	import AppBar from '../appbar.svelte';
 	const url = 'https://angel-fenix.onrender.com/products';
 	let data = [];
@@ -75,7 +76,7 @@
 				<h3>{product.name}</h3>
 				<p>price: {product.price} USD</p>
 				<p>left in stock: {product.quantity}</p>
-				<button on:click={add_to_cart(product.id)}>Add to cart</button>
+				<button on:click={add_to_cart(userName, product.id)}>Add to cart</button>
 			</div>
 		</div>
 	{/each}
