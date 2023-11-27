@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from 'svelte';
+    import { onMount, goto } from 'svelte';
     import Appbar from '../appbar.svelte';
     import { loginStatus } from '$lib/stores/login';
     import { userName } from '$lib/stores/user';
@@ -27,7 +27,7 @@
         const userData = await response.json();
         console.log('Login successful!', userData);
         loginStatus.set(true);
-        userName.set(username);
+        userName.set(userData.username);
         goto('/');
         console.log('hello');
       } else {
