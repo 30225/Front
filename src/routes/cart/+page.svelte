@@ -25,6 +25,8 @@
   });
 </script>
 
+<Appbar/>
+
 <main>
   <h1>Your Cart</h1>
 
