@@ -1,5 +1,8 @@
 <script>
-    import { loginStatus, userName } from '$lib/stores/login';
+    import { loginStatus } from '$lib/stores/login';
+    import { userName } from '$lib/stores/user';
+    $: isLoggedIn = $loginStatus;
+    $: loggedInUsername = $userName;
 </script>
 
 
@@ -14,9 +17,9 @@
         <a href="/orders" class="appbar__link">Orders</a>
         <a href="/payments" class="appbar__link">Payments</a>
         <a href="/about" class="appbar__link">About</a>
-        {#if loginStatus}
+        {#if isLoggedIn}
         <div class="username">
-            {userName}
+            {loggedInUsername}
         </div>
         {:else}
             <a href="/login" class="appbar__link">Login</a>

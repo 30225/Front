@@ -1,7 +1,8 @@
 <script>
     import { onMount } from 'svelte';
     import Appbar from '../appbar.svelte';
-    import { loginStatus, userName } from '$lib/stores/login';
+    import { loginStatus } from '$lib/stores/login';
+    import { userName } from '$lib/stores/user';
   
     let username = '';
     let password = '';
