@@ -1,3 +1,6 @@
+<script>
+    import { loginStatus, userName } from '$lib/stores/login';
+</script>
 
 
 <div class="appbar">
@@ -11,8 +14,15 @@
         <a href="/orders" class="appbar__link">Orders</a>
         <a href="/payments" class="appbar__link">Payments</a>
         <a href="/about" class="appbar__link">About</a>
-        <a href="/login" class="appbar__link">Login</a>
-        <a href="/register" class="appbar__link">Register</a>
+        {#if loginStatus}
+        <div class="username">
+            {userName}
+        </div>
+        {:else}
+            <a href="/login" class="appbar__link">Login</a>
+            <a href="/register" class="appbar__link">Register</a>
+        {/if}
+        
     </div>
 </div>
 

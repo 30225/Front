@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import Appbar from '../appbar.svelte';
+    import { loginStatus, userName } from '$lib/stores/login';
   
     let username = '';
     let password = '';
@@ -24,7 +25,9 @@
       if (response.ok) {
         const userData = await response.json();
         console.log('Login successful!', userData);
-        // Handle successful login (e.g., redirect, update state, etc.)
+        loginStatus.set(true);
+        userName.set(username);
+        goto('/');
       } else {
         console.error('Login failed.');
         // Handle login failure (e.g., show error message)
@@ -49,6 +52,7 @@
       <input type="password" id="login-password" bind:value={loginPassword} required />
   
       <button type="submit">Login</button>
+
     </form>
   </main>
   
