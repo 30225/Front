@@ -22,7 +22,7 @@
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ username: userName, item_id: itemId }),
+				body: JSON.stringify({ username: $userName, item_id: itemId }),
 			});
 
 			if (response.ok) {
