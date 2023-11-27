@@ -13,15 +13,30 @@
 		getproducts();
 	});
 
-	const add_to_cart = async (id) => {
-		const response = await fetch('/cart', {
-			method: 'PUT',
-			headers: {
-			  'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({ id: id }),
-		  });
+
+	async function add_to_cart(username, itemId) {
+		try {
+			const response = await fetch('/cart', {
+				method: 'PUT',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ username, item_id: itemId }),
+			});
+
+			if (response.ok) {
+				const cartItems = await response.json();
+				return cartItems;
+			} else {
+				console.error('Failed to add item to cart');
+				return null;
+			}
+		} catch (error) {
+			console.error('Error adding item to cart:', error);
+			return null;
+		}
 	}
+
 
 	const addProduct = async (id, name, price, quantity) => {
 		const newproduct = {
