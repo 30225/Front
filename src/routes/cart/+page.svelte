@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { userName } from '$lib/stores/user';
+  import Appbar from '../appbar.svelte';
 
   let cartItems = [];
 

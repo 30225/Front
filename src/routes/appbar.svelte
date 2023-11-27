@@ -22,7 +22,7 @@
             {loggedInUsername}
         </div>
         <a href="/cart" class="appbar__link">
-            cart
+            Cart
         </a>
         {:else}
             <a href="/login" class="appbar__link">Login</a>

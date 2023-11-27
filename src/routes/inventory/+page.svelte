@@ -13,6 +13,16 @@
 		getproducts();
 	});
 
+	const add_to_cart = async (id) => {
+		const response = await fetch('/cart', {
+			method: 'PUT',
+			headers: {
+			  'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ id: id }),
+		  });
+	}
+
 	const addProduct = async (id, name, price, quantity) => {
 		const newproduct = {
 			id: id,
@@ -50,6 +60,7 @@
 				<h3>{product.name}</h3>
 				<p>price: {product.price} USD</p>
 				<p>left in stock: {product.quantity}</p>
+				<button on:click={add_to_cart(product.id)}>Add to cart</button>
 			</div>
 		</div>
 	{/each}
