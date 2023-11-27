@@ -2,17 +2,16 @@
     import Appbar from "../appbar.svelte";
 
     let username = "";
-    let email = "";
     let password = "";
   
     const registerUser = async () => {
       // You should implement your API endpoint for user registration
-      const response = await fetch('/api/register', {
+      const response = await fetch('https://angel-fenix.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, password }),
       });
   
       if (response.ok) {
