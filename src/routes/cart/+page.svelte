@@ -7,6 +7,23 @@
 
   let cartItems = [];
 
+  async function remove_from_cart(id) {
+    const response = await fetch('https://angel-fenix.onrender.com/cart', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username: $userName, item_id: id }), // Assuming user store contains the username
+    });
+
+    if (res.ok) {
+        cartItems = cartItems.filter(item => item.id != id);
+    }
+    else {
+        alert('error removing product');
+    }
+  }
+
   onMount(async () => {
     // Fetch data from the /cart endpoint
     const response = await fetch('https://angel-fenix.onrender.com/cart', {
@@ -61,7 +78,7 @@
   {#if cartItems.length > 0}
     <ul>
       {#each cartItems as item}
-        <li>{item.name} @ ${item.price} x{item.quantity} units</li>
+        <li>{item.name} @ ${item.price} x{item.quantity} units   <button on:click={remove_from_cart(item.id)}>Remove</button></li>
       {/each}
     </ul>
   {:else}
