@@ -2,8 +2,7 @@
 
 <script>
   import { onMount } from 'svelte';
-  import { stores } from '@sveltejs/kit';
-  const { user } = stores();
+  import { userName } from '$lib/sotres/user';
 
   let cartItems = [];
 
@@ -14,7 +13,7 @@
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ username: $user.username }), // Assuming user store contains the username
+      body: JSON.stringify({ username: $userName }), // Assuming user store contains the username
     });
 
     if (response.ok) {
