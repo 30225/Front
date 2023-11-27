@@ -22,6 +22,30 @@
     } else {
       console.error('Failed to fetch cart data');
     }
+
+    var counts = {}
+
+    for (let item of cartItems) {
+        if (item in counts) {
+            counts.item += 1;
+        }
+        else {
+            counts.item = 1;
+        }
+    }
+
+    cartItems = []
+
+    for (id in counts) {
+        const res = await fetch('https://angel-fenix.onrender.com/products${id}', {
+            method: 'GET',});
+        if (res.ok) {
+            const product = await res.json();
+            product.quantity = counts.id;
+            cartItems.push(product);
+        }
+    }
+
   });
 </script>
 
@@ -33,7 +57,7 @@
   {#if cartItems.length > 0}
     <ul>
       {#each cartItems as item}
-        <li>{item}</li>
+        <li>{item.name} @ {item.price} x {item.quantity}</li>
       {/each}
     </ul>
   {:else}
