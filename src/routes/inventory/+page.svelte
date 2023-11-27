@@ -15,14 +15,14 @@
 	});
 
 
-	async function add_to_cart(username, itemId) {
+	async function add_to_cart(itemId) {
 		try {
 			const response = await fetch('https://angel-fenix.onrender.com/cart', {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ username, item_id: itemId }),
+				body: JSON.stringify({ username: userName, item_id: itemId }),
 			});
 
 			if (response.ok) {
@@ -76,7 +76,7 @@
 				<h3>{product.name}</h3>
 				<p>price: {product.price} USD</p>
 				<p>left in stock: {product.quantity}</p>
-				<button on:click={add_to_cart(userName, product.id)}>Add to cart</button>
+				<button on:click={add_to_cart(product.id)}>Add to cart</button>
 			</div>
 		</div>
 	{/each}
