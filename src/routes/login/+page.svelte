@@ -29,6 +29,7 @@
         loginStatus.set(true);
         userName.set(username);
         goto('/');
+        console.log('hello');
       } else {
         console.error('Login failed.');
         // Handle login failure (e.g., show error message)
