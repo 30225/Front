@@ -36,7 +36,7 @@
 
     cartItems = []
 
-    for (id in counts) {
+    for (let id in counts) {
         const res = await fetch('https://angel-fenix.onrender.com/products${id}', {
             method: 'GET',});
         if (res.ok) {
