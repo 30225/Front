@@ -27,22 +27,26 @@
 
     for (let item of cartItems) {
         if (item in counts) {
-            counts.item += 1;
+            counts[item] += 1;
+            console.log('added');
         }
         else {
-            counts.item = 1;
+            counts[item] = 1;
         }
     }
 
     cartItems = []
 
     for (let id in counts) {
-        const res = await fetch('https://angel-fenix.onrender.com/products${id}', {
+        console.log(id);
+        const res = await fetch(`https://angel-fenix.onrender.com/products/${id}`, {
             method: 'GET',});
         if (res.ok) {
-            const product = await res.json();
-            product.quantity = counts.id;
-            cartItems.push(product);
+            var product = await res.json();
+            console.log(product.name);
+            console.log(counts[id]);
+            product.quantity = counts[id];
+            cartItems = [...cartItems, {name: product.name, quantity: product.quantity, price: product.price}]
         }
     }
 
@@ -53,20 +57,21 @@
 
 <main>
   <h1>Your Cart</h1>
-
+    {#key cartItems}
   {#if cartItems.length > 0}
     <ul>
       {#each cartItems as item}
-        <li>{item.name} @ {item.price} x {item.quantity}</li>
+        <li>{item.name} @ ${item.price} x{item.quantity} units</li>
       {/each}
     </ul>
   {:else}
     <p>Your cart is empty.</p>
   {/if}
+  {/key}
 </main>
 
 <style>
-  /* Add your cart page styling here */
+
   main {
     max-width: 600px;
     margin: 0 auto;
@@ -85,5 +90,6 @@
 
   li {
     margin-bottom: 10px;
+    font-size: large;
   }
 </style>
