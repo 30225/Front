@@ -1,8 +1,6 @@
-<!-- Cart.svelte -->
-
 <script>
   import { onMount } from 'svelte';
-  import { userName } from '$lib/sotres/user';
+  import { userName } from '$lib/stores/user';
 
   let cartItems = [];
 
