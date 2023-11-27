@@ -1,5 +1,6 @@
 <script>
-    import { onMount, goto } from 'svelte';
+    import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
     import Appbar from '../appbar.svelte';
     import { loginStatus } from '$lib/stores/login';
     import { userName } from '$lib/stores/user';
