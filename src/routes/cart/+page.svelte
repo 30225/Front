@@ -32,8 +32,8 @@
 
   {#if cartItems.length > 0}
     <ul>
-      {#each cartItems as item (item.id)}
-        <li>{item.name} - {item.price}</li>
+      {#each cartItems as item}
+        <li>{item}</li>
       {/each}
     </ul>
   {:else}
