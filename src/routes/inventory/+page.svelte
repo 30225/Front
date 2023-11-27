@@ -16,7 +16,7 @@
 
 	async function add_to_cart(username, itemId) {
 		try {
-			const response = await fetch('/cart', {
+			const response = await fetch('https://angel-fenix.onrender.com/cart', {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',

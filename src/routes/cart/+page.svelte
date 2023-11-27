@@ -3,11 +3,13 @@
   import { userName } from '$lib/stores/user';
   import Appbar from '../appbar.svelte';
 
+
+
   let cartItems = [];
 
   onMount(async () => {
     // Fetch data from the /cart endpoint
-    const response = await fetch('/cart', {
+    const response = await fetch('https://angel-fenix.onrender.com/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
