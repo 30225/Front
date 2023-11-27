@@ -20,7 +20,7 @@
 			price: price,
 			quantity: quantity,
 		};
-		const res = await fetch(url, {
+		var res = await fetch(url, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -28,7 +28,9 @@
 			body: JSON.stringify(newproduct),
 		});
 
-		if (res.ok) {
+		res = await res.json()
+
+		if (res.message != 'Product already exists.') {
 			data = [...data, newproduct];
 		}
 
