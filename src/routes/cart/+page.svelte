@@ -8,15 +8,16 @@
   let cartItems = [];
 
   async function remove_from_cart(id) {
+    console.log(id);
     const response = await fetch('https://angel-fenix.onrender.com/cart', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: $userName, item_id: id }), // Assuming user store contains the username
+        body: JSON.stringify({ username: $userName, item_id: id })
     });
 
-    if (res.ok) {
+    if (response.ok) {
         cartItems = cartItems.filter(item => item.id != id);
     }
     else {
@@ -63,7 +64,7 @@
             console.log(product.name);
             console.log(counts[id]);
             product.quantity = counts[id];
-            cartItems = [...cartItems, {name: product.name, quantity: product.quantity, price: product.price}]
+            cartItems = [...cartItems, {id: product.id, name: product.name, quantity: product.quantity, price: product.price}]
         }
     }
 
