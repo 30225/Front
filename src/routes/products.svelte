@@ -38,6 +38,7 @@
         flex-direction: column;
         align-items: center;
         row-gap: 2rem;
+        margin-bottom: 2rem;
     }
 
 

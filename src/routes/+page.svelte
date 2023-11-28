@@ -1,5 +1,6 @@
 <script>
     import AppBar from './appbar.svelte';
+    import Items from './inventory/items.svelte';
     import Products from './products.svelte';
 </script>
 
@@ -17,6 +18,9 @@
     
     <Products />
 
+    <Items/>
+
+
 
 
 
@@ -27,9 +31,6 @@
     main {
         font-family: 'Gelasio', serif;
     }
-
-
-    
 
     .banner {
         background-image: url('/images/banner.jpg');

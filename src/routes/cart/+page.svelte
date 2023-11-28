@@ -79,7 +79,7 @@
   {#if cartItems.length > 0}
     <ul>
       {#each cartItems as item}
-        <li>{item.name} @ ${item.price} x{item.quantity} units   <button on:click={remove_from_cart(item.id)}>Remove</button></li>
+        <li>{item.name} @ ${item.price} x{item.quantity} units   <button class="remove_button" on:click={remove_from_cart(item.id)}>Remove</button></li>
       {/each}
     </ul>
   {:else}
@@ -95,6 +95,22 @@
     margin: 0 auto;
     padding: 20px;
   }
+
+  .remove_button {
+		display: inline-block;
+    margin-left: 2rem;
+		padding: 2px 10px;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		border: 2px solid #3498db;
+		color: #3498db;
+		background-color: #ffffff;
+		border-radius: 5px;
+		transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+	}
 
   h1 {
     font-size: 24px;
