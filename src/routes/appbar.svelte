@@ -13,6 +13,7 @@
         </a>
     </div>
     <div class="appbar__right">
+        <a href="/" class="appbar__link">Home</a>
         <a href="/inventory" class="appbar__link">Inventory</a>
         <a href="/orders" class="appbar__link">Orders</a>
         <a href="/payments" class="appbar__link">Payments</a>
