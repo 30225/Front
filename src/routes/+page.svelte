@@ -7,14 +7,6 @@
 <AppBar />
 
 <main>
-
-    <div class="banner">
-        <div class="banner__content">
-            <h1 class="banner__title">E-Commerce Platform</h1>
-            <button class="banner__button">Search</button>
-        </div>
-    </div>
-
     <header class="header">
         <div class="container header_container">
           <div class="header_filter">
@@ -28,7 +20,7 @@
             <a href="#" class="header_filter_link">Bose</a>
             <a href="#" class="header_filter_link">Beats by Dre</a>
           </div>
-          <img src="./image/Banner.png" alt="" class="header_img" />
+          <img src="static\images\Banner.png" alt="" class="header_img" />
         </div>
       </header>
   
@@ -77,6 +69,17 @@
 </main>
 
 <style>
+
+:root {
+  --font-main: "Inter", sans-serif;
+  --colo-primary: #292626;
+  --colo-dark-1: #000000;
+  --colo-dark-2: #7d8184;
+  --colo-white-1: #ffffff;
+  --colo-white-2: #f5f5f5;
+  --color-green: #00d656;
+}
+
     main {
         font-family: 'Gelasio', serif;
     }
@@ -118,7 +121,6 @@
 
 
 
-
 .header_container {
   width: 100%;
   display: flex;
@@ -133,6 +135,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-decoration: none;
 }
 .header_filter_link {
   color:black;
@@ -162,6 +165,35 @@
 }
 #demo {
   font-size: 1.8rem;
+}
+
+/* categories */
+.categories {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 2rem;
+}
+.category {
+  text-align: center;
+  padding: 3rem;
+  border: 1px solid ;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: var(--colo-white-2);
+}
+.category:hover {
+  background-color: var(--colo-dark-2);
+  color: var(--colo-white-1);
+}
+
+.category a:visited {
+  color: var(--colo-dark-1);
+}
+
+.category_icon {
+  width: 3.5rem;
+  height: auto;
 }
 </style>
 
