@@ -63,7 +63,7 @@
             <div class="trending_content">
               <p class="trending_p">Trending</p>
               <h2 class="trending_title">Enhance Your Music Experience</h2>
-              <a href="./shop.html" class="trending_btn">Shop Now!</a>
+              <a href="/inventory" class="trending_btn">Shop Now!</a>
             </div>
             <img src="/images/speaker.png" alt="" class="trending_img" />
           </div>
@@ -92,9 +92,6 @@
         </div>
       </section>
   
-
-
-    <Items/>
     <footer class="footer">
         <div class="container footer_container">
           <div class="footer_item">
@@ -287,7 +284,7 @@ ul {
 .footer_container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   grid-gap: 3rem;
   padding: 5rem 0rem;
   color: var(--colo-white-1);

@@ -7,6 +7,7 @@
 	const getproducts = async () => {
 		const res = await fetch(url);
 		data = await res.json();
+		console.log('"Database" products: ', data);
 	};
 
 	onMount(() => {
@@ -46,7 +47,7 @@
 	{#each data as product}
 		<div class="item">
 			<div class="card">
-				<img class="card-pic" src="/images/054c1.svg" alt="{product.name}"/>
+				<img class="card-pic" src={product.url} alt="{product.name}"/>
 				<div class="card-body">
 					<h3>{product.name}</h3>
 					<p>price: {product.price} USD</p>
