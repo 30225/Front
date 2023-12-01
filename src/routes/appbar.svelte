@@ -19,6 +19,7 @@
         <a href="/orders" class="appbar__link">Orders</a>
         <a href="/payments" class="appbar__link">Payments</a>
         <a href="/about" class="appbar__link">About</a>
+        <a href="/addProduct" class="appbar__link">Add product</a>
         {#if isLoggedIn}
         <div class="username">
             {loggedInUsername}
