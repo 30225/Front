@@ -75,7 +75,7 @@
 				<img class="card-pic" src="https://angel-fenix.onrender.com/images/{product.id}" alt="{product.name}"/>
 				<div class="card-body">
 					<h3>{product.name}</h3>
-					<p>price: {product.price} USD</p>
+					<p>price: {product.price} $</p>
 					<p>left in stock: {product.quantity}</p>
 					{#key $admin}
 					{#if $admin}
