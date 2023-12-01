@@ -15,9 +15,7 @@
     </div>
     <div class="appbar__right">
         <a href="/" class="appbar__link">Home</a>
-        <a href="/inventory" class="appbar__link">Inventory</a>
-        <a href="/orders" class="appbar__link">Orders</a>
-        <a href="/payments" class="appbar__link">Payments</a>
+        <a href="/inventory" class="appbar__link">Shop</a>
         <a href="/about" class="appbar__link">About</a>
         {#if isLoggedIn}
         <div class="username">
@@ -27,8 +25,19 @@
             Cart
         </a>
         {:else}
-            <a href="/login" class="appbar__link">Login</a>
-            <a href="/register" class="appbar__link">Register</a>
+            <div class="nav_items">
+                <a href="/login" class="appbar__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                </svg>
+                </a>
+                <a href="/cart">
+                <img src="images\cart.png" alt="" class="nav_cart" />
+                </a>
+                <a class="num-cart" href="./cart.html">
+                <span></span>
+                </a>
+            </div>
         {/if}
         
     </div>
