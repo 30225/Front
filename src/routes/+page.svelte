@@ -65,7 +65,7 @@
               <h2 class="trending_title">Enhance Your Music Experience</h2>
               <a href="./shop.html" class="trending_btn">Shop Now!</a>
             </div>
-            <img src="images\speaker.png" alt="" class="trending_img" />
+            <img src="/images/speaker.png" alt="" class="trending_img" />
           </div>
         </div>
       </section>
@@ -73,18 +73,18 @@
       <section class="section">
         <div class="container services_container">
           <div class="service">
-            <img src="images\service-1.png" alt="" class="service_img" />
+            <img src="/images/service-1.png" alt="" class="service_img" />
             <h3 class="service_title">FAST AND FREE DELIVERY</h3>
             <p class="service_p">For a satisfied customer.</p>
           </div>
           <div class="service">
-            <img src="images\service-2.png" alt="" class="service_img" />
+            <img src="/images/service-2.png" alt="" class="service_img" />
             <h3 class="service_title">24/7 SUPPORT</h3>
             <p class="service_p">Contact us, we are available </p>
             <p class="service_p">24 hours a day.</p>
           </div>
           <div class="service">
-            <img src="images\service-3.png" alt="" class="service_img" />
+            <img src="/images/service-3.png" alt="" class="service_img" />
             <h3 class="service_title">MONEY BACK GUARANTY</h3>
             <p class="service_p">If you are not satisfied,</p>
             <p class="service_p">we will refund your money.</p>
