@@ -50,11 +50,14 @@
   
         if (response.ok) {
           console.log('Product added successfully');
+          alert('Product added successfully, please reload')
           // You can redirect or perform other actions here after a successful POST request.
         } else {
+          alert('failed to add product');
           console.error('Failed to add product');
         }
       } catch (error) {
+        alert('failed to add product');
         console.error('Error:', error);
       }
     };

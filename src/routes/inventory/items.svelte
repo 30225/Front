@@ -14,6 +14,7 @@
 	onMount(() => {
 		getproducts();
 	});
+	
 
 	async function remove_product(itemId) {
 		try {
