@@ -72,7 +72,7 @@
 	{#each data as product}
 		<div class="item">
 			<div class="card">
-				<img class="card-pic" src="{product.id}" alt="{product.name}"/>
+				<img class="card-pic" src="{product.url}" alt="{product.name}"/>
 				<div class="card-body">
 					<h3>{product.name}</h3>
 					<p>price: {product.price} $</p>
