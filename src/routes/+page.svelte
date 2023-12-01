@@ -20,7 +20,7 @@
             <a href="#" class="header_filter_link">Bose</a>
             <a href="#" class="header_filter_link">Beats by Dre</a>
           </div>
-          <img src="static\images\Banner.png" alt="" class="header_img" />
+          <img src="/images/Banner.png" alt="" class="header_img" />
         </div>
       </header>
   
