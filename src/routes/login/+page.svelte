@@ -8,10 +8,6 @@
     let username = '';
     let password = '';
   
-    const registerUser = async () => {
-      // Your registration logic here
-    };
-  
     let loginUsername = '';
     let loginPassword = '';
   
