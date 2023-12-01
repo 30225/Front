@@ -1,8 +1,9 @@
 <script>
-    let id = '';
+    let id = 0;
     let name = '';
     let price = '';
     let quantity = '';
+    let picture = null;
   
     const handleSubmit = async () => {
       const productData = {
@@ -10,6 +11,7 @@
         name,
         price,
         quantity,
+        picture,
       };
   
       try {
@@ -36,7 +38,7 @@
   <form on:submit|preventDefault={handleSubmit}>
     <label>
       ID:
-      <input bind:value={id} type="text" required />
+      <input bind:value={id} type="number" required />
     </label>
     <label>
       Name:
@@ -49,6 +51,10 @@
     <label>
       Quantity:
       <input bind:value={quantity} type="number" required />
+    </label>
+    <label>
+      Picture:
+      <input type="file" accept="image/*" on:change={(e) => (picture = e.target.files[0])} />
     </label>
     <button type="submit">Submit</button>
   </form>
