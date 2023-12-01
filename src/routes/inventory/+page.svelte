@@ -5,8 +5,7 @@
     import Items from "./items.svelte";
     import Postproduct from "./postproduct.svelte";
     import { userName } from '$lib/stores/user';
-
-    let admin = false;
+    import { admin } from '$lib/stores/admin'
 
     let showModal  = false;
 
@@ -22,7 +21,7 @@
         let body = await response.json();
         
         if (body.admin == 'true') {
-            admin = true;
+            admin.set(true);
         }
 
 
@@ -33,8 +32,8 @@
 
 <Items/>
 
-{#key admin}
-    {#if admin}
+{#key $admin}
+    {#if $admin}
         <div class="button_container">
             <button class="add_button" on:click={() => {showModal = true}}> Add Product </button>
         </div>
