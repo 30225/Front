@@ -56,10 +56,59 @@
   
       <button type="submit">Login</button>
 
+      <span
+      >Don't have an account?
+      <a href="/register" class="form_auth_link"
+        >Register</a
+      ></span
+    >
+
     </form>
   </main>
   
   <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600;700;800;900&display=swap");
+:root {
+  --font-main: "Inter", sans-serif;
+  --colo-primary: #292626;
+  --colo-dark-1: #000000;
+  --colo-dark-2: #7d8184;
+  --colo-white-1: #ffffff;
+  --colo-white-2: #f5f5f5;
+  --color-green: #00d656;
+}
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+.w-6 {
+  width: 2rem;
+  height: 2rem;
+}
+.h-6 {
+  fill: rgb(239, 140, 1);
+}
+
+
     main {
       max-width: 400px;
       margin: 2rem auto 0;
@@ -92,14 +141,16 @@
   
     button {
       padding: 0.75rem;
-      background-color: #007bff;
+      background-color: var(--colo-primary);
       color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
   
     button:hover {
-      background-color: #0056b3;
+      background-color: var(--colo-dark-2);
     }
   </style>

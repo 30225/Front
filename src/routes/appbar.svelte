@@ -9,7 +9,8 @@
 <div class="appbar">
     <div class="appbar__left">
         <a href="/">
-            <img src="/images/logo.png" alt="Logo" class="appbar__logo">
+            <a href="/" class="appbar__logo">TecXmart</a>
+
         </a>
     </div>
     <div class="appbar__right">
@@ -35,9 +36,46 @@
 
 <style>
 
-    div {
-        font-family: 'Gelasio', serif;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600;700;800;900&display=swap");
+:root {
+  --font-main: "Inter", sans-serif;
+  --colo-primary: #292626;
+  --colo-dark-1: #000000;
+  --colo-dark-2: #7d8184;
+  --colo-white-1: #ffffff;
+  --colo-white-2: #f5f5f5;
+  --color-green: #00d656;
+}
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: var(--font-main);
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+.w-6 {
+  width: 2rem;
+  height: 2rem;
+}
+.h-6 {
+  fill: rgb(239, 140, 1);
+}
+
+
 
     .appbar {
         display: flex;
@@ -56,6 +94,10 @@
 
     .appbar__logo {
         height: 3rem;
+        font-size: 1.3rem;
+    }
+    .appbar__logo:visited {
+        color: #000;
     }
 
     .appbar__right {

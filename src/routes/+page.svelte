@@ -1,7 +1,6 @@
 <script>
     import AppBar from './appbar.svelte';
     import Items from './inventory/items.svelte';
-    import Products from './products.svelte';
 </script>
 
 <AppBar />
@@ -20,7 +19,7 @@
             <a href="#" class="header_filter_link">Bose</a>
             <a href="#" class="header_filter_link">Beats by Dre</a>
           </div>
-          <img src="static\images\Banner.png" alt="" class="header_img" />
+          <img src="images/Banner.png" alt="" class="header_img" />
         </div>
       </header>
   
@@ -55,12 +54,98 @@
         </div>
       </section>
   
-    
-    
-    <Products />
+
+      <section class="section">
+        <div class="container">
+          <div class="trending">
+            <div class="trending_content">
+              <p class="trending_p">Trending</p>
+              <h2 class="trending_title">Enhance Your Music Experience</h2>
+              <a href="./shop.html" class="trending_btn">Shop Now!</a>
+            </div>
+            <img src="images\speaker.png" alt="" class="trending_img" />
+          </div>
+        </div>
+      </section>
+  
+      <section class="section">
+        <div class="container services_container">
+          <div class="service">
+            <img src="images\service-1.png" alt="" class="service_img" />
+            <h3 class="service_title">FAST AND FREE DELIVERY</h3>
+            <p class="service_p">For a satisfied customer.</p>
+          </div>
+          <div class="service">
+            <img src="images\service-2.png" alt="" class="service_img" />
+            <h3 class="service_title">24/7 SUPPORT</h3>
+            <p class="service_p">Contact us, we are available </p>
+            <p class="service_p">24 hours a day.</p>
+          </div>
+          <div class="service">
+            <img src="images\service-3.png" alt="" class="service_img" />
+            <h3 class="service_title">MONEY BACK GUARANTY</h3>
+            <p class="service_p">If you are not satisfied,</p>
+            <p class="service_p">we will refund your money.</p>
+          </div>
+        </div>
+      </section>
+  
+
 
     <Items/>
-
+    <footer class="footer">
+        <div class="container footer_container">
+          <div class="footer_item">
+            <a href="./index.html" class="footer_logo">TecXmart</a>
+            <div class="footer_p">
+              Explore a curated selection of cutting-edge technology that enhances your digital lifestyle. 
+              Improve your expectations with TecXmart.
+            </div>
+          </div>
+          <div class="footer_item">
+            <h3 class="footer_item_titl">Contact</h3>
+            <ul class="footer_list">
+              <li class="li footer_list_item">Chipre, Cartagena, Colombia</li>
+              <li class="li footer_list_item">sberrio@utb.edu.co</li>
+              <li class="li footer_list_item">+57 3185793683</li>
+              <li class="li footer_list_item">+57 3177933864</li>
+            </ul>
+          </div>
+          <div class="footer_item">
+            <h3 class="footer_item_titl">Options</h3>
+            <ul class="footer_list">
+              <a href="/login">
+                <li class="li footer_list_item">Login / Register</li>
+              </a>
+              <a href="/shop">
+                <li class="li footer_list_item">Shop</li>
+              </a>
+              <a href="/about">
+                <li class="li footer_list_item">About</li>
+              </a>
+              <a href="/cart">
+                <li class="li footer_list_item">Cart</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footer_item">
+            <h3 class="footer_item_titl">Support</h3>
+            <ul class="footer_list">
+              <li class="li footer_list_item">Privacy policy</li>
+              <li class="li footer_list_item">Terms of use</li>
+              <li class="li footer_list_item">FAQ's</li>
+              <li class="li footer_list_item">Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="container footer_bottom_container">
+            <p class="footer_copy">
+              Copyright TecXmart 2023. All right reserved
+            </p>
+          </div>
+        </div>
+      </footer>
 
 
 
@@ -69,7 +154,7 @@
 </main>
 
 <style>
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600;700;800;900&display=swap");
 :root {
   --font-main: "Inter", sans-serif;
   --colo-primary: #292626;
@@ -80,45 +165,34 @@
   --color-green: #00d656;
 }
 
-    main {
-        font-family: 'Gelasio', serif;
-    }
 
-    .banner {
-        background-image: url('/images/banner.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 75vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  font-size: 1rem;
+}
 
-    .banner__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-    }
+a {
+  text-decoration: none;
+}
 
-    .banner__title {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        color: #52ff00
-    }
-
-    .banner__button {
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 5px;
-        background-color: #52ff00;
-        color: black;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+.w-6 {
+  width: 2rem;
+  height: 2rem;
+}
+.h-6 {
+  fill: rgb(239, 140, 1);
+}
 
 
 .header_container {
@@ -127,7 +201,7 @@
   margin-top: 4rem;
 }
 .header_container img{
-  width: 80%;
+  width: 70%;
   height: 390px;
 }
 .header_filter {
@@ -138,7 +212,7 @@
   text-decoration: none;
 }
 .header_filter_link {
-  color:black;
+  color:var(--colo-dark-1);
 }
 
 
@@ -148,10 +222,10 @@
 }
 
 .section_category_p {
-  border-left: 1.4rem solid #292626;
+  border-left: 1.4rem solid var(--colo-primary);
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #292626;
+  color: var(--colo-primary);
   font-size: 1.3rem;
 }
 .section_header {
@@ -181,6 +255,8 @@
   transition: all 0.3s ease;
   cursor: pointer;
   background-color: var(--colo-white-2);
+  border-color: var(--colo-white-2);
+
 }
 .category:hover {
   background-color: var(--colo-dark-2);
@@ -194,7 +270,141 @@
 .category_icon {
   width: 3.5rem;
   height: auto;
+  color: var(--colo-dark-1);
 }
+
+.category_name {
+    color: var(--colo-dark-1);
+}
+
+/* footer */
+.footer {
+  margin-top: 10rem;
+  background-color: var(--colo-dark-1);
+}
+.footer_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 3rem;
+  padding: 5rem 0rem;
+  color: var(--colo-white-1);
+}
+.footer_logo {
+  font-size: 3rem;
+  color: var(--colo-white-1);
+  font-weight: 700;
+}
+.footer_p {
+  margin-top: 1.2rem;
+}
+.footer_item_titl {
+  margin-bottom: 1.2rem;
+}
+.footer_list_item {
+  margin: 0.5rem 0rem;
+  color: var(--colo-white-1);
+}
+
+.footer_list_item:visited {
+  color: var(--colo-white-1);
+}
+
+.footer_bottom_container {
+  width: 100%;
+  text-align: center;
+}
+.footer_copy {
+  color: var(--colo-dark-2);
+  padding: 1.5rem 0rem;
+}
+
+@media only screen and (max-width: 1070px) {
+  .header_container {
+    flex-direction: column;
+  }
+  .header_filter {
+    display: none;
+  }
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger > svg {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .top_nav {
+    display: none;
+  }
+  .nav_list {
+    display: none;
+  }
+  .nav_items {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* trending */
+.trending {
+  background-color: var(--colo-dark-1);
+  padding: 8rem 4rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+}
+.trending_img {
+  width: 100%;
+}
+.trending_p {
+  color: var(--color-green);
+}
+.trending_title {
+  color: var(--colo-white-1);
+  font-size: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.trending_btn {
+  background-color: var(--color-green);
+  padding: 1rem 2rem;
+  color: var(--colo-white-1);
+}
+.products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 2rem;
+}
+
+/* services */
+.services_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 3rem;
+}
+.service {
+  text-align: center;
+}
+.service_title {
+  margin: 1.5rem 0rem;
+}
+
 </style>
 
 
