@@ -1,6 +1,5 @@
 <script>
     import AppBar from './appbar.svelte';
-    import Items from './inventory/items.svelte';
 </script>
 
 <AppBar />

@@ -120,5 +120,9 @@ ul {
         color: #000;
         text-decoration: none;
     }
+
+    .appbar__link  svg{
+        margin-right: 20px;
+    }
 </style>
 
