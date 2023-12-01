@@ -16,8 +16,8 @@
         <div class="about__content">
                 For the user's convenience, we maintain a simple operation in invertory storage.
         <br><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur voluptates vel. Nulla accusantium, sapiente omnis voluptas maxime odio aspernatur officia illum explicabo labore, excepturi rem nisi sint libero suscipit.
-        </div>
+        The epitome of innovation and passion for technology. At TecXmart, we are driven by a relentless commitment to redefine your digital experience. Our story is one of a curated selection of cutting-edge gadgets and devices designed to seamlessly integrate into your lifestyle. With a focus on innovation and customer satisfaction, TecXmart is not just a marketplace; it's a journey into the future of tech. Join us as we explore, embrace, and elevate the possibilities that technology brings to your fingertips. Discover more than a store; discover TecXmart – where desires meet innovation :)
+    </div>
 
         <br><br>
         <div class="about__subtitle">

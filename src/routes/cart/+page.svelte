@@ -152,6 +152,7 @@ ul {
 		color: var(--colo-dark-1);
 		transition: 0.3s ease;
     border-color: transparent;
+    background-color: transparent;
 	}
 
   .remove_button:hover {
